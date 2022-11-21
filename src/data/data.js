@@ -99,6 +99,17 @@ let items = [
     retDateTime: '31.10.22',
     flightNumber: '6E-904'
   },
+  {
+    id: 9,
+    price: 6500,
+    originCity: 'Paris, frankreich',
+    originCityCode: 'BLR',
+    destCity: 'Delhi',
+    destCityCode: 'DEL',
+    deptDateTime: '23.10.22',
+    retDateTime: '31.10.22',
+    flightNumber: '6E-904'
+  },
 ];
 
 export {items};
