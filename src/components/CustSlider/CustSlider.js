@@ -61,11 +61,7 @@ class CustSlider extends React.Component {
   render() {
     return (
       <div style={style}>
-<<<<<<< HEAD
-        <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange}  tipFormatter={value => `${value*50}`} />
-=======
         <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange}  tipFormatter={value => `${value*50}€`} />
->>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
       </div>
     );
   }

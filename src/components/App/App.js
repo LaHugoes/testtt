@@ -9,33 +9,6 @@ import CustSlider from "../CustSlider/CustSlider";
 
 class App extends Component {
   constructor(props) {
-<<<<<<< HEAD
-      super(props);
-      this.state = {
-        selectedTab: '',
-        travelDestination: '',
-        deptDate: '',
-        retDate: '',
-        passengerCount: 1,
-        items: items
-      };
-
-      this.handleChangetravelDestination = this.handleChangetravelDestination.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.handleSelect = this.handleSelect.bind(this);
-      this.handlePassengerCountChange = this.handlePassengerCountChange.bind(this);
-      this.handleStartDateChange = this.handleStartDateChange.bind(this);
-      this.handleEndDateChange = this.handleEndDateChange.bind(this);
-      this.handleChangeSlider = this.handleChangeSlider.bind(this);
-      this.findByMatchingProperties = this.findByMatchingProperties.bind(this);
-      this.filterByPrice = this.filterByPrice.bind(this);
-
-      moment.updateLocale('en', {
-        calendar : {
-            sameElse : 'Do MMM YYYY'
-        }
-      });
-=======
     //hier im constructor werden die daten für die suchfunktion initialisiert
     super(props);
     this.state = {
@@ -66,7 +39,6 @@ class App extends Component {
         sameElse: "Do MMM YYYY",
       },
     });
->>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
   }
 
   //diese funktion kontrolliert den zustand des sliders, also den Wert des Preis auf dem Schieber
@@ -76,12 +48,8 @@ class App extends Component {
     });
 
     const objToMatch = {
-<<<<<<< HEAD
-      travelDestination: this.state.travelDestination
-=======
       destCity: this.state.destCity,
       destCountry: this.state.destCountry,
->>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
     };
 
     //hier ist die logik zum filtern von daten
@@ -101,20 +69,6 @@ class App extends Component {
     );
   }
 
-<<<<<<< HEAD
-  handleChangetravelDestination(event) {
-      const objToMatch = {
-        travelDestination: event.target.value
-      };
-
-      const filteredData = this.findByMatchingProperties(items, objToMatch);
-      if( filteredData.length !== 0 ) {
-        this.setState({
-          travelDestination: event.target.value,
-          items: filteredData
-        });
-      }
-=======
   //hier wird gehandelt, wenn die Zielstadt geändert wird
   handleChangedestCity(event) {
     const objToMatch = {
@@ -148,7 +102,6 @@ class App extends Component {
         items: filteredData,
       });
     }
->>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
   }
 
   //hier wird ein neues seiten laden verhindert, wenn auf suchen geklickt wird
@@ -192,12 +145,6 @@ class App extends Component {
 
   //das ist eine render-method um die suchanfrage der person oben anzuzeigen
   render() {
-<<<<<<< HEAD
-
-    var travelDestination = this.state.travelDestination ? this.state.travelDestination : "";
-    var headerElem = "";
-    var startDate = this.state.startDate ? "Depart: "+this.state.startDate.toString().slice(4, 15) : "";
-=======
     var destCity = this.state.destCity ? this.state.destCity : "";
     var destCountry = this.state.destCountry ? this.state.destCountry : "";
     var headerElem = "";
@@ -214,7 +161,6 @@ class App extends Component {
         </div>
       );
     }
->>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
 
     //hier returnen wir mit react den jsx content der suchfunktion + das ItemPage component an das via props die gefilterten suchdaten übergeben werden
     return (
@@ -224,39 +170,6 @@ class App extends Component {
         </div>
         <div className="container">
           <div className="one-third column">
-<<<<<<< HEAD
-              <Tabs onSelect={this.handleSelect}>
-                <TabList>
-                  <Tab>Reise-Suche</Tab>
-                </TabList>
-
-                <TabPanel>
-                  <div className="Item">
-                    <form onSubmit={this.handleSubmit}>
-                        <input className="row" type="text" value={this.state.travelDestination} onChange={this.handleChangetravelDestination} placeholder="Traum-Stadt" />
-                        <DatePicker
-                            selected={this.state.startDate}
-                            onChange={this.handleStartDateChange}
-                            minDate={moment()}
-                            maxDate={moment().add(90, "days")}
-                                placeholderText="Anreise Datum" />
-                        <DatePicker
-                            selected={this.state.endDate}
-                            onChange={this.handleEndDateChange}
-                            minDate={moment()}
-                            maxDate={moment().add(90, "days")}
-                                placeholderText="Abreise Datum" />
-                        <input className="row" type="text" value={this.state.passengerCount} onChange={this.handlePassengerCountChange} />
-                      <input className="row" type="submit" value="Suchen"  />
-                    </form>
-                  </div>
-                </TabPanel>
-              </Tabs>
-              <div>
-                <div className="label">
-                  <label><h5>Preissegment</h5></label>
-                  <CustSlider onChange={this.handleChangeSlider} />
-=======
             <Tabs onSelect={this.handleSelect}>
               <TabList>
                 <Tab>Reise-Suche</Tab>
@@ -301,7 +214,6 @@ class App extends Component {
                     />
                     <input className="row" type="submit" value="Suchen" />
                   </form>
->>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
                 </div>
               </TabPanel>
             </Tabs>

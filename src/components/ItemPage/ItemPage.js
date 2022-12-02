@@ -19,13 +19,9 @@ function ItemPage({ items }) {
     return (
       <ul className="ItemPage-items">
         <label>
-<<<<<<< HEAD
-        <h5>Es gibt keine Ziele für die angegebenen Daten 🙁</h5>
-=======
           <h5>
             Es gibt derzeit keine Reisen die auf ihre Suchanfrage zutreffen.
           </h5>
->>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
         </label>
       </ul>
     );
