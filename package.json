@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "name": "dein-digitales-reisebuero",
   "version": "1.0.0",
+=======
+  "name": "reiseBuero",
+  "version": "0.0.1",
+  "homepage": ".",
+>>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
   "private": true,
   "devDependencies": {
     "react-scripts": "0.9.5"

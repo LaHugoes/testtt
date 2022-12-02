@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 # dependencies
 /node_modules
 /coverage
 build
 
+=======
+build
+
+# dependencies
+/node_modules
+
+
+# misc
+>>>>>>> 11216cf78e4fee2d164ee14576b56b65a5083906
 .DS_Store
 .env
 npm-debug.log*
