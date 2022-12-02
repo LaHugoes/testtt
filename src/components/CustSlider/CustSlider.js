@@ -9,6 +9,7 @@ const Range = createSliderWithTooltip(Slider.Range);
 const Handle = Slider.Handle;
 const style = { margin: 15 };
 
+//hier haben wir die logik für den Slider
 const handle = (props) => {
   const { value, dragging, index, ...restProps } = props;
   return (
@@ -28,8 +29,9 @@ class CustSlider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      //hier wird er initialisiert und die Slider Preis-grenzen gesetzt
       lowerBound: 0,
-      upperBound: 100,
+      upperBound: 50,
       value: [0, 100]
     };
   }
@@ -44,7 +46,7 @@ class CustSlider extends React.Component {
 
   onSliderChange = (value) => {
     if (typeof this.props.onChange === 'function') {
-        this.props.onChange({lowerBound: value[0]*100, upperBound: value[1]*100});
+        this.props.onChange({lowerBound: value[0]*50, upperBound: value[1]*50});
     }
     this.setState({
       value,
@@ -59,7 +61,7 @@ class CustSlider extends React.Component {
   render() {
     return (
       <div style={style}>
-        <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange}  tipFormatter={value => `${value*100}`} />
+        <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange}  tipFormatter={value => `${value*50}€`} />
       </div>
     );
   }

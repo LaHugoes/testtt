@@ -3,10 +3,9 @@ build
 # dependencies
 /node_modules
 
-# testing
-/coverage
+#unsere production builds
+.build
 
-# production
 
 # misc
 .DS_Store
