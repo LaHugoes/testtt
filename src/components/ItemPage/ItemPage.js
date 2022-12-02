@@ -21,7 +21,7 @@ function ItemPage({ items }) {
     return (
       <ul className="ItemPage-items">
         <label>
-        <h5>There are no flights available.</h5>
+        <h5>Es gibt keine Ziele für die angegebenen Daten 🙁</h5>
         </label>
       </ul>
     );

@@ -1,6 +1,6 @@
 {
-  "name": "flight-search-engiine",
-  "version": "0.0.1",
+  "name": "dein-digitales-reisebuero",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.9.5"

@@ -29,7 +29,7 @@ class CustSlider extends React.Component {
     super(props);
     this.state = {
       lowerBound: 0,
-      upperBound: 100,
+      upperBound: 50,
       value: [0, 100]
     };
   }
@@ -44,7 +44,7 @@ class CustSlider extends React.Component {
 
   onSliderChange = (value) => {
     if (typeof this.props.onChange === 'function') {
-        this.props.onChange({lowerBound: value[0]*100, upperBound: value[1]*100});
+        this.props.onChange({lowerBound: value[0]*50, upperBound: value[1]*50});
     }
     this.setState({
       value,
@@ -59,7 +59,7 @@ class CustSlider extends React.Component {
   render() {
     return (
       <div style={style}>
-        <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange}  tipFormatter={value => `${value*100}`} />
+        <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange}  tipFormatter={value => `${value*50}`} />
       </div>
     );
   }

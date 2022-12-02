@@ -3,10 +3,9 @@ let items = [
   {
     id: 0,
     price: 4500,
-    originCity: 'Barcelona, Spanien',
-    originCityCode: 'PNQ',
-    destCity: 'Delhi',
-    destCityCode: 'DEL',
+    travelDestination: 'Barcelona',
+    originCountry: 'Spanien',
+    travelDestinationCode: 'PNQ',
     deptDateTime: '10.00 AM',
     retDateTime: '12.00 PM',
     flightNumber: 'AI-202'
@@ -14,10 +13,8 @@ let items = [
   {
     id: 1,
     price: 4500,
-    originCity: 'Paris, Frankreich',
-    originCityCode: 'DEL',
-    destCity: 'Pune',
-    destCityCode: 'PNQ',
+    travelDestination: 'Paris, Frankreich',
+    travelDestinationCode: 'DEL',
     deptDateTime: '30.09.22',
     retDateTime: '06.10.22',
     flightNumber: 'AI-203'
@@ -25,10 +22,8 @@ let items = [
   {
     id: 2,
     price: 3500,
-    originCity: 'Rom, Italien',
-    originCityCode: 'HYD',
-    destCity: 'Bengaluru',
-    destCityCode: 'BLR',
+    travelDestination: 'Rom, Italien',
+    travelDestinationCode: 'HYD',
     deptDateTime: '02.10.22',
     retDateTime: '09.10.22',
     flightNumber: 'AI-204'
@@ -36,10 +31,8 @@ let items = [
   {
     id: 3,
     price: 3500,
-    originCity: 'Lissabon, Portugal',
-    originCityCode: 'BLR',
-    destCity: 'Hyderabad',
-    destCityCode: 'HYD',
+    travelDestination: 'Lissabon, Portugal',
+    travelDestinationCode: 'BLR',
     deptDateTime: '15.10.22',
     retDateTime: '21.10.22',
     flightNumber: 'AI-205'
@@ -47,10 +40,8 @@ let items = [
   {
     id: 4,
     price: 5000,
-    originCity: 'Berlin, Deutschland',
-    originCityCode: 'PNQ',
-    destCity: 'Delhi',
-    destCityCode: 'DEL',
+    travelDestination: 'Berlin, Deutschland',
+    travelDestinationCode: 'PNQ',
     deptDateTime: '22.10.22',
     retDateTime: '00.10.22',
     flightNumber: '6E-900'
@@ -58,10 +49,8 @@ let items = [
   {
     id: 5,
     price: 5000,
-    originCity: 'Prag, Tschechien',
-    originCityCode: 'DEL',
-    destCity: 'Pune',
-    destCityCode: 'PNQ',
+    travelDestination: 'Prag, Tschechien',
+    travelDestinationCode: 'DEL',
     deptDateTime: '12.10.22',
     retDateTime: '19.00 AM',
     flightNumber: '6E-901'
@@ -69,10 +58,8 @@ let items = [
   {
     id: 6,
     price: 4000,
-    originCity: 'Split, Kroatien',
-    originCityCode: 'HYD',
-    destCity: 'Bengaluru',
-    destCityCode: 'BLR',
+    travelDestination: 'Split, Kroatien',
+    travelDestinationCode: 'HYD',
     deptDateTime: '04.10.22',
     retDateTime: '11.10.22',
     flightNumber: '6E-902'
@@ -80,10 +67,8 @@ let items = [
   {
     id: 7,
     price: 4000,
-    originCity: 'Cannesm, Frankreich',
-    originCityCode: 'BLR',
-    destCity: 'Hyderabad',
-    destCityCode: 'HYD',
+    travelDestination: 'Cannesm, Frankreich',
+    travelDestinationCode: 'BLR',
     deptDateTime: '21.10.22',
     retDateTime: '29.10.22',
     flightNumber: '6E-903'
@@ -91,10 +76,8 @@ let items = [
   {
     id: 8,
     price: 6500,
-    originCity: 'London, England',
-    originCityCode: 'BLR',
-    destCity: 'Delhi',
-    destCityCode: 'DEL',
+    travelDestination: 'London, England',
+    travelDestinationCode: 'BLR',
     deptDateTime: '23.10.22',
     retDateTime: '31.10.22',
     flightNumber: '6E-904'

@@ -15,16 +15,14 @@ class App extends Component {
       super(props);
       this.state = {
         selectedTab: '',
-        originCity: '',
-        destCity: '',
+        travelDestination: '',
         deptDate: '',
         retDate: '',
         passengerCount: 1,
         items: items
       };
 
-      this.handleChangeDestCity = this.handleChangeDestCity.bind(this);
-      this.handleChangeOriginCity = this.handleChangeOriginCity.bind(this);
+      this.handleChangetravelDestination = this.handleChangetravelDestination.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       this.handleSelect = this.handleSelect.bind(this);
       this.handlePassengerCountChange = this.handlePassengerCountChange.bind(this);
@@ -48,8 +46,7 @@ class App extends Component {
     });
 
     const objToMatch = {
-      originCity: this.state.originCity,
-      destCity: this.state.destCity
+      travelDestination: this.state.travelDestination
     };
 
     let filteredData = this.findByMatchingProperties(items, objToMatch);
@@ -64,32 +61,15 @@ class App extends Component {
       return (item.price >= this.state.sliderRangeObj.lowerBound && item.price <= this.state.sliderRangeObj.upperBound);
   }
 
-  handleChangeOriginCity(event) {
+  handleChangetravelDestination(event) {
       const objToMatch = {
-        originCity: event.target.value
+        travelDestination: event.target.value
       };
 
       const filteredData = this.findByMatchingProperties(items, objToMatch);
       if( filteredData.length !== 0 ) {
         this.setState({
-          originCity: event.target.value,
-          items: filteredData
-        });
-      }
-  }
-
-  handleChangeDestCity(event) {
-      const destCity = event.target.value ? event.target.value : "";
-      const objToMatch = {
-        originCity: this.state.originCity,
-        destCity: destCity
-      };
-
-      const filteredData = this.findByMatchingProperties(items, objToMatch);
-
-      if( filteredData.length !== 0) {
-        this.setState({
-          destCity: event.target.value,
+          travelDestination: event.target.value,
           items: filteredData
         });
       }
@@ -132,16 +112,9 @@ class App extends Component {
 
   render() {
 
-    var originCity = this.state.originCity ? this.state.originCity : "";
-    var destCity = this.state.destCity ? this.state.destCity : "";
+    var travelDestination = this.state.travelDestination ? this.state.travelDestination : "";
     var headerElem = "";
     var startDate = this.state.startDate ? "Depart: "+this.state.startDate.toString().slice(4, 15) : "";
-    if(!!originCity && !!destCity) {
-       headerElem =
-          <div>
-            <h5> {this.state.originCity} > {this.state.destCity} </h5>
-          </div>
-    }
 
     return (
       <div className="App">
@@ -158,8 +131,7 @@ class App extends Component {
                 <TabPanel>
                   <div className="Item">
                     <form onSubmit={this.handleSubmit}>
-                        <input className="row" type="text" value={this.state.originCity} onChange={this.handleChangeOriginCity} placeholder="Ziel-Land" />
-                        <input className="row" type="text" value={this.state.destCity} onChange={this.handleChangeDestCity} placeholder="Ziel-Stadt"/>
+                        <input className="row" type="text" value={this.state.travelDestination} onChange={this.handleChangetravelDestination} placeholder="Traum-Stadt" />
                         <DatePicker
                             selected={this.state.startDate}
                             onChange={this.handleStartDateChange}
