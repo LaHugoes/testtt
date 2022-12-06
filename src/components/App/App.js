@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import ItemPage from "../ItemPage/ItemPage";
-import { items } from "../../data/data";
+import { artikel } from "../../data/data";
 import DatePicker from "react-datepicker";
 import moment from "moment";
 import CustSlider from "../CustSlider/CustSlider";
@@ -12,26 +12,26 @@ class App extends Component {
     //hier im constructor werden die daten für die suchfunktion initialisiert
     super(props);
     this.state = {
-      selectedTab: "",
-      destCity: "",
-      destCountry: "",
-      deptDate: "",
-      retDate: "",
-      passengerCount: 1,
-      items: items,
+      ausgewaehlterTab: "",
+      zielStadt: "",
+      zielLand: "",
+      abreiseDatum: "",
+      rueckkehrDatum: "",
+      passagierAnzahl: 1,
+      artikel: artikel,
     };
 
-    this.handleChangedestCountry = this.handleChangedestCountry.bind(this);
-    this.handleChangedestCity = this.handleChangedestCity.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
-    this.handlePassengerCountChange =
-      this.handlePassengerCountChange.bind(this);
-    this.handleStartDateChange = this.handleStartDateChange.bind(this);
-    this.handleEndDateChange = this.handleEndDateChange.bind(this);
-    this.handleChangeSlider = this.handleChangeSlider.bind(this);
-    this.findByMatchingProperties = this.findByMatchingProperties.bind(this);
-    this.filterByPrice = this.filterByPrice.bind(this);
+    this.zielLandBearbeiter = this.zielLandBearbeiter.bind(this);
+    this.zielStadtBearbeiter = this.zielStadtBearbeiter.bind(this);
+    this.formAbschicken = this.formAbschicken.bind(this);
+    this.auswahlBearbeiten = this.auswahlBearbeiten.bind(this);
+    this.passagierAnzahlBearbeiter =
+      this.passagierAnzahlBearbeiter.bind(this);
+    this.startDatumBearbeiter = this.startDatumBearbeiter.bind(this);
+    this.endDatumBearbeiter = this.endDatumBearbeiter.bind(this);
+    this.sliderBearbeiter = this.sliderBearbeiter.bind(this);
+    this.durchPassendeKategorienFinden = this.durchPassendeKategorienFinden.bind(this);
+    this.nachPreisFiltern = this.nachPreisFiltern.bind(this);
 
     //mit moment haben wir einen funktionierenden kalender zur suche hinzugefügt
     moment.updateLocale("de", {
@@ -42,92 +42,92 @@ class App extends Component {
   }
 
   //diese funktion kontrolliert den zustand des sliders, also den Wert des Preis auf dem Schieber
-  handleChangeSlider(obj) {
+  sliderBearbeiter(obj) {
     this.setState({
       sliderRangeObj: obj,
     });
 
-    const objToMatch = {
-      destCity: this.state.destCity,
-      destCountry: this.state.destCountry,
+    const objektZumMatchen = {
+      zielStadt: this.state.zielStadt,
+      zielLand: this.state.zielLand,
     };
 
     //hier ist die logik zum filtern von daten
-    let filteredData = this.findByMatchingProperties(items, objToMatch);
-    filteredData = filteredData.filter(this.filterByPrice);
+    let gefilterteDatne = this.durchPassendeKategorienFinden(artikel, objektZumMatchen);
+    gefilterteDatne = gefilterteDatne.filter(this.nachPreisFiltern);
 
     this.setState({
-      items: filteredData,
+      artikel: gefilterteDatne,
     });
   }
 
   //logik zum filtern nach preis, es wird der state des sliders betrachtet und nach oberem und unterem limit gefiltert 
-  filterByPrice(item) {
+  nachPreisFiltern(item) {
     return (
-      item.price >= this.state.sliderRangeObj.lowerBound &&
-      item.price <= this.state.sliderRangeObj.upperBound
+      item.price >= this.state.sliderRangeObj.untereGrenze &&
+      item.price <= this.state.sliderRangeObj.obereGrenze
     );
   }
 
   //hier wird gehandelt, wenn die Zielstadt geändert wird
-  handleChangedestCity(event) {
-    const objToMatch = {
-      destCity: event.target.value,
+  zielStadtBearbeiter(event) {
+    const objektZumMatchen = {
+      zielStadt: event.target.value,
     };
 
-    const filteredData = this.findByMatchingProperties(items, objToMatch);
-    if (filteredData.length !== 0) {
+    const gefilterteDatne = this.durchPassendeKategorienFinden(artikel, objektZumMatchen);
+    if (gefilterteDatne.length !== 0) {
       this.setState({
-        destCity: event.target.value,
-        items: filteredData,
+        zielStadt: event.target.value,
+        artikel: gefilterteDatne,
       });
     }
   }
 
   //hier wird gehandelt, wenn das Zielland geändert wird
-  handleChangedestCountry(event) {
-    const destCountry = event.target.value ? event.target.value : "";
-    const objToMatch = {
-      destCity: this.state.destCity,
-      destCountry: destCountry,
+  zielLandBearbeiter(event) {
+    const zielLand = event.target.value ? event.target.value : "";
+    const objektZumMatchen = {
+      zielStadt: this.state.zielStadt,
+      zielLand: zielLand,
     };
 
     //hier werden die gefilterten daten gespeichert
-    const filteredData = this.findByMatchingProperties(items, objToMatch);
+    const gefilterteDatne = this.durchPassendeKategorienFinden(artikel, objektZumMatchen);
 
     //falls welche vorhanden sind bzw oben gespeichert wurden, werden sie in den state geschrieben
-    if (filteredData.length !== 0) {
+    if (gefilterteDatne.length !== 0) {
       this.setState({
-        destCountry: event.target.value,
-        items: filteredData,
+        zielLand: event.target.value,
+        artikel: gefilterteDatne,
       });
     }
   }
 
   //hier wird ein neues seiten laden verhindert, wenn auf suchen geklickt wird
-  handleSubmit(event) {
+  formAbschicken(event) {
     event.preventDefault();
   }
 
-  handleSelect(index, last) {
+  auswahlBearbeiten(index, last) {
     this.setState({
-      selectedTab: index,
+      ausgewaehlterTab: index,
     });
   }
 
   //hier wird die anzahl der reisenden geändert
-  handlePassengerCountChange(event) {
-    this.setState({ passengerCount: event.target.value });
+  passagierAnzahlBearbeiter(event) {
+    this.setState({ passagierAnzahl: event.target.value });
   }
 
   //hier das reisedatum
-  handleStartDateChange(date) {
+  startDatumBearbeiter(date) {
     this.setState({
-      startDate: date,
+      startDatum: date,
     });
   }
 
-  findByMatchingProperties(arrObj, matchingObj) {
+  durchPassendeKategorienFinden(arrObj, matchingObj) {
     return arrObj.filter(function (entry) {
       return Object.keys(matchingObj).every(function (key) {
         return (
@@ -137,7 +137,7 @@ class App extends Component {
     });
   }
 
-  handleEndDateChange(date) {
+  endDatumBearbeiter(date) {
     this.setState({
       endDate: date,
     });
@@ -145,18 +145,18 @@ class App extends Component {
 
   //das ist eine render-method um die suchanfrage der person oben anzuzeigen
   render() {
-    var destCity = this.state.destCity ? this.state.destCity : "";
-    var destCountry = this.state.destCountry ? this.state.destCountry : "";
-    var headerElem = "";
-    var startDate = this.state.startDate
-      ? "Depart: " + this.state.startDate.toString().slice(4, 15)
+    var zielStadt = this.state.zielStadt ? this.state.zielStadt : "";
+    var zielLand = this.state.zielLand ? this.state.zielLand : "";
+    var headerElement = "";
+    var startDatum = this.state.startDatum
+      ? "Depart: " + this.state.startDatum.toString().slice(4, 15)
       : "";
-    if (!!destCity && !!destCountry) {
-      headerElem = (
+    if (!!zielStadt && !!zielLand) {
+      headerElement = (
         <div>
           <h5>
             {" "}
-            {this.state.destCountry} > {this.state.destCity}{" "}
+            {this.state.zielLand} > {this.state.zielStadt}{" "}
           </h5>
         </div>
       );
@@ -170,38 +170,38 @@ class App extends Component {
         </div>
         <div className="container">
           <div className="one-third column">
-            <Tabs onSelect={this.handleSelect}>
+            <Tabs onSelect={this.auswahlBearbeiten}>
               <TabList>
                 <Tab>Reise-Suche</Tab>
               </TabList>
 
               <TabPanel>
                 <div className="Item">
-                  <form onSubmit={this.handleSubmit}>
+                  <form onSubmit={this.formAbschicken}>
                     <input
                       className="row"
                       type="text"
-                      value={this.state.destCountry}
-                      onChange={this.handleChangedestCountry}
+                      value={this.state.zielLand}
+                      onChange={this.zielLandBearbeiter}
                       placeholder="Ziel-Land"
                     />
                     <input
                       className="row"
                       type="text"
-                      value={this.state.destCity}
-                      onChange={this.handleChangedestCity}
+                      value={this.state.zielStadt}
+                      onChange={this.zielStadtBearbeiter}
                       placeholder="Ziel-Stadt"
                     />
                     <DatePicker
-                      selected={this.state.startDate}
-                      onChange={this.handleStartDateChange}
+                      selected={this.state.startDatum}
+                      onChange={this.startDatumBearbeiter}
                       minDate={moment()}
                       maxDate={moment().add(90, "days")}
                       placeholderText="Anreise Datum"
                     />
                     <DatePicker
                       selected={this.state.endDate}
-                      onChange={this.handleEndDateChange}
+                      onChange={this.endDatumBearbeiter}
                       minDate={moment()}
                       maxDate={moment().add(90, "days")}
                       placeholderText="Abreise Datum"
@@ -209,8 +209,8 @@ class App extends Component {
                     <input
                       className="row"
                       type="text"
-                      value={this.state.passengerCount}
-                      onChange={this.handlePassengerCountChange}
+                      value={this.state.passagierAnzahl}
+                      onChange={this.passagierAnzahlBearbeiter}
                     />
                     <input className="row" type="submit" value="Suchen" />
                   </form>
@@ -222,19 +222,18 @@ class App extends Component {
                 <label>
                   <h5>Preissegment</h5>
                 </label>
-                <CustSlider onChange={this.handleChangeSlider} />
+                <CustSlider onChange={this.sliderBearbeiter} />
               </div>
             </div>
           </div>
           <div className="two-thirds column">
             <div className="header">
-              <div className="Item-left">{headerElem}</div>
-              <div className="Item-right">{startDate}</div>
+              <div className="Item-left">{headerElement}</div>
+              <div className="Item-right">{startDatum}</div>
             </div>
             <main>
               <ItemPage
-                items={this.state.items}
-                onAddToCart={this.handleAddToCart}
+                artikel={this.state.artikel}
               />
             </main>
           </div>

@@ -8,9 +8,9 @@ let Item = ({ item, children }) => (
   <div className="Item">
     <div className="Item-left">
         <h5>{item.price}€ pro Woche</h5>
-        <div className="Item-price">{item.destCity}, {item.destCountry}</div>
-        <div className="Item-description">Vom: {item.deptDateTime}</div>
-        <div className="Item-description">Bis: {item.retDateTime}</div>
+        <div className="Item-price">{item.zielStadt}, {item.zielLand}</div>
+        <div className="Item-description">Vom: {item.abreiseDatumTime}</div>
+        <div className="Item-description">Bis: {item.rueckkehrDatumTime}</div>
     </div>
 
     <div className="Item-right">

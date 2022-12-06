@@ -16,7 +16,7 @@ Der Main-Component der die Suchlogik hält & auch die ItemPage anzeig
 Logik für den Preis-grenzen Slider
 
 #ItemPage
-Hier werden die Items also Reiseobjekte gemapt und angzeigt
+Hier werden die artikel also Reiseobjekte gemapt und angzeigt
 
 #Item
 Hier ist die Struktur der einzelnen Objekte in einem component

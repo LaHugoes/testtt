@@ -30,38 +30,38 @@ class CustSlider extends React.Component {
     super(props);
     this.state = {
       //hier wird er initialisiert und die Slider Preis-grenzen gesetzt
-      lowerBound: 0,
-      upperBound: 50,
+      untereGrenze: 0,
+      obereGrenze: 50,
       value: [0, 100]
     };
   }
 
-  onLowerBoundChange = (e) => {
-    this.setState({ lowerBound: +e.target.value });
+  untereGrenzeWechsel = (e) => {
+    this.setState({ untereGrenze: +e.target.value });
   }
 
-  onUpperBoundChange = (e) => {
-    this.setState({ upperBound: +e.target.value });
+  obereGrenzeWechsel = (e) => {
+    this.setState({ obereGrenze: +e.target.value });
   }
 
-  onSliderChange = (value) => {
+  sliderWechsel = (value) => {
     if (typeof this.props.onChange === 'function') {
-        this.props.onChange({lowerBound: value[0]*50, upperBound: value[1]*50});
+        this.props.onChange({untereGrenze: value[0]*50, obereGrenze: value[1]*50});
     }
     this.setState({
       value,
     });
   }
 
-  handleApply = () => {
-    const { lowerBound, upperBound } = this.state;
-    this.setState({ value: [lowerBound, upperBound] });
+  wechselAnwenden = () => {
+    const { untereGrenze, obereGrenze } = this.state;
+    this.setState({ value: [untereGrenze, obereGrenze] });
   }
 
   render() {
     return (
       <div style={style}>
-        <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange}  tipFormatter={value => `${value*50}€`} />
+        <Range allowCross={false} value={this.state.value} onChange={this.sliderWechsel}  tipFormatter={value => `${value*50}€`} />
       </div>
     );
   }

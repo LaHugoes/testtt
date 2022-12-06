@@ -2,13 +2,13 @@ import React from "react";
 import Item from "../Item/Item";
 import "./ItemPage.css";
 
-//hier werden die Reise-Items gemapt und an das Item-Component gereicht, falls keine vorhanden sind, wird angezeigt, dass es keine Items gibt => keine Reiseziel für die Suchanfrage
-function ItemPage({ items }) {
-  let length = items.length;
+//hier werden die Reise-artikel gemapt und an das Item-Component gereicht, falls keine vorhanden sind, wird angezeigt, dass es keine artikel gibt => keine Reiseziel für die Suchanfrage
+function ItemPage({ artikel }) {
+  let length = artikel.length;
   if (length > 0) {
     return (
-      <ul className="ItemPage-items">
-        {items.map((item) => (
+      <ul className="ItemPage-artikel">
+        {artikel.map((item) => (
           <li key={item.id} className="ItemPage-item">
             <Item item={item}></Item>
           </li>
@@ -17,7 +17,7 @@ function ItemPage({ items }) {
     );
   } else {
     return (
-      <ul className="ItemPage-items">
+      <ul className="ItemPage-artikel">
         <label>
           <h5>
             Es gibt derzeit keine Reisen die auf ihre Suchanfrage zutreffen.
@@ -28,7 +28,7 @@ function ItemPage({ items }) {
   }
 }
 ItemPage.propTypes = {
-  items: React.PropTypes.array.isRequired,
+  artikel: React.PropTypes.array.isRequired,
 };
 
 export default ItemPage;
