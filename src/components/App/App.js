@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import ItemPage from "../ItemPage/ItemPage";
+import ReiseZielSeite from "../ItemPage/ItemPage";
 import { artikel } from "../../data/data";
 import DatePicker from "react-datepicker";
 import moment from "moment";
@@ -162,7 +162,7 @@ class App extends Component {
       );
     }
 
-    //hier returnen wir mit react den jsx content der suchfunktion + das ItemPage component an das via props die gefilterten suchdaten übergeben werden
+    //hier returnen wir mit react den jsx content der suchfunktion + das ReiseZielSeite component an das via props die gefilterten suchdaten übergeben werden
     return (
       <div className="App">
         <div className="App-header">
@@ -232,7 +232,7 @@ class App extends Component {
               <div className="Item-right">{startDatum}</div>
             </div>
             <main>
-              <ItemPage
+              <ReiseZielSeite
                 artikel={this.state.artikel}
               />
             </main>

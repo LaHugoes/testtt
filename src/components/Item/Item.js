@@ -1,10 +1,9 @@
 
 import React from 'react';
 import './Item.css';
-import logo from './ItemLogo.svg';
 
 //in diesem component werden einfach die daten von der ItemPage übergeben und die Reiseziele angezeigt
-let Item = ({ item, children }) => (
+const ReiseZiel = ({ item, children }) => (
   <div className="Item">
     <div className="Item-left">
         <h5>{item.price}€ pro Woche</h5>
@@ -15,16 +14,16 @@ let Item = ({ item, children }) => (
 
     <div className="Item-right">
       <div className="Item-image" >
-        <img src={logo} className="Item-logo" alt="logo" />
+        <img className="Item-logo" alt="logo" />
       </div>
       {children}
     </div>
   </div>
 )
 
-Item.propTypes = {
+ReiseZiel.propTypes = {
   item: React.PropTypes.object.isRequired,
   children: React.PropTypes.node
 };
 
-export default Item;
+export default ReiseZiel;

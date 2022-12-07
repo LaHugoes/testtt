@@ -10,12 +10,12 @@ Hier ist der Quellcode
 Hier haben wir die Components
 
 #App 
-Der Main-Component der die Suchlogik hält & auch die ItemPage anzeig
+Der Main-Component der die Suchlogik hält & auch die ReiseZielSeite anzeig
 
 #Cust-Slider
 Logik für den Preis-grenzen Slider
 
-#ItemPage
+#ReiseZielSeite
 Hier werden die artikel also Reiseobjekte gemapt und angzeigt
 
 #Item
