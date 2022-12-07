@@ -7,7 +7,8 @@ let artikel = [
     zielLand: 'Spanien',
     abreiseDatumTime: '10.00 AM',
     rueckkehrDatumTime: '12.00 PM',
-    flightNumber: 'AI-202'
+    flightNumber: 'AI-202',
+    imageUrl: "https://media.cntraveler.com/photos/591f1c7d1f187a2af3dedef0/16:9/w_2580,c_limit/barcelona-park-guell-GettyImages-512152500.jpg"
   },
   {
     id: 1,
@@ -16,7 +17,8 @@ let artikel = [
     zielLand: 'Frankreich',
     abreiseDatumTime: '30.09.22',
     rueckkehrDatumTime: '06.10.22',
-    flightNumber: 'AI-203'
+    flightNumber: 'AI-203',
+    imageUrl: ""
   },
   {
     id: 2,
@@ -25,7 +27,8 @@ let artikel = [
     zielLand: 'Italien',
     abreiseDatumTime: '02.10.22',
     rueckkehrDatumTime: '09.10.22',
-    flightNumber: 'AI-204'
+    flightNumber: 'AI-204',
+    imageUrl: ""
   },
   {
     id: 3,

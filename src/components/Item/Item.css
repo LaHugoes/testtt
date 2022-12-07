@@ -13,9 +13,14 @@
 }
 
 .Item-image {
-  height: 128px;
-  border: 1px solid #ccc;
+  height: 100%;
   float: left;
+}
+
+.Item-image img {
+  border-radius: 10px;
+  height: 180px;
+  margin-top: 5px;
 }
 
 .Item-price {

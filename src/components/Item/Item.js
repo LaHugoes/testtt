@@ -14,7 +14,7 @@ const ReiseZiel = ({ item, children }) => (
 
     <div className="Item-right">
       <div className="Item-image" >
-        <img className="Item-logo" alt="logo" />
+        <img src={item.imageUrl}className="Item-logo" alt="logo" />
       </div>
       {children}
     </div>
