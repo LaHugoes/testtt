@@ -5,8 +5,8 @@ let artikel = [
     price: 4500,
     zielStadt: 'Barcelona',
     zielLand: 'Spanien',
-    abreiseDatumTime: '10.00 AM',
-    rueckkehrDatumTime: '12.00 PM',
+    abreiseDatumZeit: '10.00 AM',
+    rueckkehrDatumZeit: '12.00 PM',
     flightNumber: 'AI-202',
     imageUrl: "https://media.cntraveler.com/photos/591f1c7d1f187a2af3dedef0/16:9/w_2580,c_limit/barcelona-park-guell-GettyImages-512152500.jpg"
   },
@@ -15,8 +15,8 @@ let artikel = [
     price: 4500,
     zielStadt: 'Paris',
     zielLand: 'Frankreich',
-    abreiseDatumTime: '30.09.22',
-    rueckkehrDatumTime: '06.10.22',
+    abreiseDatumZeit: '30.09.22',
+    rueckkehrDatumZeit: '06.10.22',
     flightNumber: 'AI-203',
     imageUrl: ""
   },
@@ -25,8 +25,8 @@ let artikel = [
     price: 3500,
     zielStadt: 'Rom',
     zielLand: 'Italien',
-    abreiseDatumTime: '02.10.22',
-    rueckkehrDatumTime: '09.10.22',
+    abreiseDatumZeit: '02.10.22',
+    rueckkehrDatumZeit: '09.10.22',
     flightNumber: 'AI-204',
     imageUrl: ""
   },
@@ -35,8 +35,8 @@ let artikel = [
     price: 3500,
     zielStadt: 'Lissabon',
     zielLand: 'Portugal',
-    abreiseDatumTime: '15.12.22',
-    rueckkehrDatumTime: '21.12.22',
+    abreiseDatumZeit: '15.12.22',
+    rueckkehrDatumZeit: '21.12.22',
     flightNumber: 'AI-205'
   },
   {
@@ -44,8 +44,8 @@ let artikel = [
     price: 5000,
     zielStadt: 'Berlin',
     zielLand: 'Deutschland',
-    abreiseDatumTime: '22.10.22',
-    rueckkehrDatumTime: '00.10.22',
+    abreiseDatumZeit: '22.10.22',
+    rueckkehrDatumZeit: '00.10.22',
     flightNumber: '6E-900'
   },
   {
@@ -53,8 +53,8 @@ let artikel = [
     price: 5000,
     zielStadt: 'Prag',
     zielLand: 'Tschechien',
-    abreiseDatumTime: '12.10.22',
-    rueckkehrDatumTime: '19.00 AM',
+    abreiseDatumZeit: '12.10.22',
+    rueckkehrDatumZeit: '19.00 AM',
     flightNumber: '6E-901'
   },
   {
@@ -62,8 +62,8 @@ let artikel = [
     price: 4000,
     zielStadt: 'Split',
     zielLand: 'Kroatien',
-    abreiseDatumTime: '04.10.22',
-    rueckkehrDatumTime: '11.10.22',
+    abreiseDatumZeit: '04.10.22',
+    rueckkehrDatumZeit: '11.10.22',
     flightNumber: '6E-902'
   },
   {
@@ -71,8 +71,8 @@ let artikel = [
     price: 4000,
     zielStadt: 'Cannes',
     zielLand: 'Frankreich',
-    abreiseDatumTime: '21.10.22',
-    rueckkehrDatumTime: '29.10.22',
+    abreiseDatumZeit: '21.10.22',
+    rueckkehrDatumZeit: '29.10.22',
     flightNumber: '6E-903'
   },
   {
@@ -80,8 +80,8 @@ let artikel = [
     price: 6500,
     zielStadt: 'London',
     zielLand: 'England',
-    abreiseDatumTime: '23.10.22',
-    rueckkehrDatumTime: '31.10.22',
+    abreiseDatumZeit: '23.10.22',
+    rueckkehrDatumZeit: '31.10.22',
     flightNumber: '6E-904'
   },
   {
@@ -89,8 +89,8 @@ let artikel = [
     price: 6500,
     zielStadt: 'Paris',
     zielLand: 'Frankreich',
-    abreiseDatumTime: '23.10.22',
-    rueckkehrDatumTime: '31.10.22',
+    abreiseDatumZeit: '23.10.22',
+    rueckkehrDatumZeit: '31.10.22',
     flightNumber: '6E-904'
   },
 ];

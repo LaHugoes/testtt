@@ -1,6 +1,6 @@
 import React from "react";
-import ReiseZiel from "../Item/Item";
-import "./ItemPage.css";
+import ReiseZiel from "../ReiseZiel/ReiseZiel";
+import "./ReiseZielSeite.css";
 
 //hier werden die Reise-artikel gemapt und an das Item-Component gereicht, falls keine vorhanden sind, wird angezeigt, dass es keine artikel gibt => keine Reiseziel für die Suchanfrage
 function ReiseZielSeite({ artikel }) {

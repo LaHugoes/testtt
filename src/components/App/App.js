@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import ReiseZielSeite from "../ItemPage/ItemPage";
+import ReiseZielSeite from "../ReiseZielSeite/ReiseZielSeite";
 import { artikel } from "../../data/data";
 import DatePicker from "react-datepicker";
 import moment from "moment";
