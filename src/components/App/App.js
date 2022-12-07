@@ -176,7 +176,7 @@ class App extends Component {
               </TabList>
 
               <TabPanel>
-                <div className="Item">
+                <div className="ReiseZiel">
                   <form onSubmit={this.formAbschicken}>
                     <input
                       className="row"
