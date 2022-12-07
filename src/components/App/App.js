@@ -64,8 +64,8 @@ class App extends Component {
   //logik zum filtern nach preis, es wird der state des sliders betrachtet und nach oberem und unterem limit gefiltert 
   nachPreisFiltern(item) {
     return (
-      item.price >= this.state.sliderRangeObj.untereGrenze &&
-      item.price <= this.state.sliderRangeObj.obereGrenze
+      item.preis >= this.state.sliderRangeObj.untereGrenze &&
+      item.preis <= this.state.sliderRangeObj.obereGrenze
     );
   }
 

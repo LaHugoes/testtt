@@ -6,15 +6,15 @@ import './ReiseZiel.css';
 const ReiseZiel = ({ item, children }) => (
   <div className="Item">
     <div className="Item-left">
-        <h5>{item.price}€ pro Woche</h5>
-        <div className="Item-price">{item.zielStadt}, {item.zielLand}</div>
+        <h5>{item.preis}€ pro Woche</h5>
+        <div className="Item-preis">{item.zielStadt}, {item.zielLand}</div>
         <div className="Item-description">Vom: {item.abreiseDatumZeit}</div>
         <div className="Item-description">Bis: {item.rueckkehrDatumZeit}</div>
     </div>
 
     <div className="Item-right">
       <div className="Item-image" >
-        <img src={item.imageUrl}className="Item-logo" alt="logo" />
+        <img src={item.bildUrl}className="Item-logo" alt="logo" />
       </div>
       {children}
     </div>

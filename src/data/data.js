@@ -2,37 +2,37 @@
 let artikel = [
   {
     id: 0,
-    price: 4500,
+    preis: 4500,
     zielStadt: 'Barcelona',
     zielLand: 'Spanien',
     abreiseDatumZeit: '10.00 AM',
     rueckkehrDatumZeit: '12.00 PM',
     flightNumber: 'AI-202',
-    imageUrl: "https://media.cntraveler.com/photos/591f1c7d1f187a2af3dedef0/16:9/w_2580,c_limit/barcelona-park-guell-GettyImages-512152500.jpg"
+    bildUrl: "https://media.cntraveler.com/photos/591f1c7d1f187a2af3dedef0/16:9/w_2580,c_limit/barcelona-park-guell-GettyImages-512152500.jpg"
   },
   {
     id: 1,
-    price: 4500,
+    preis: 4500,
     zielStadt: 'Paris',
     zielLand: 'Frankreich',
     abreiseDatumZeit: '30.09.22',
     rueckkehrDatumZeit: '06.10.22',
     flightNumber: 'AI-203',
-    imageUrl: ""
+    bildUrl: ""
   },
   {
     id: 2,
-    price: 3500,
+    preis: 3500,
     zielStadt: 'Rom',
     zielLand: 'Italien',
     abreiseDatumZeit: '02.10.22',
     rueckkehrDatumZeit: '09.10.22',
     flightNumber: 'AI-204',
-    imageUrl: ""
+    bildUrl: ""
   },
   {
     id: 3,
-    price: 3500,
+    preis: 3500,
     zielStadt: 'Lissabon',
     zielLand: 'Portugal',
     abreiseDatumZeit: '15.12.22',
@@ -41,7 +41,7 @@ let artikel = [
   },
   {
     id: 4,
-    price: 5000,
+    preis: 5000,
     zielStadt: 'Berlin',
     zielLand: 'Deutschland',
     abreiseDatumZeit: '22.10.22',
@@ -50,7 +50,7 @@ let artikel = [
   },
   {
     id: 5,
-    price: 5000,
+    preis: 5000,
     zielStadt: 'Prag',
     zielLand: 'Tschechien',
     abreiseDatumZeit: '12.10.22',
@@ -59,7 +59,7 @@ let artikel = [
   },
   {
     id: 6,
-    price: 4000,
+    preis: 4000,
     zielStadt: 'Split',
     zielLand: 'Kroatien',
     abreiseDatumZeit: '04.10.22',
@@ -68,7 +68,7 @@ let artikel = [
   },
   {
     id: 7,
-    price: 4000,
+    preis: 4000,
     zielStadt: 'Cannes',
     zielLand: 'Frankreich',
     abreiseDatumZeit: '21.10.22',
@@ -77,7 +77,7 @@ let artikel = [
   },
   {
     id: 8,
-    price: 6500,
+    preis: 6500,
     zielStadt: 'London',
     zielLand: 'England',
     abreiseDatumZeit: '23.10.22',
@@ -86,7 +86,7 @@ let artikel = [
   },
   {
     id: 9,
-    price: 6500,
+    preis: 6500,
     zielStadt: 'Paris',
     zielLand: 'Frankreich',
     abreiseDatumZeit: '23.10.22',
