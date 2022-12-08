@@ -5,6 +5,7 @@ import './ReiseZiel.css';
 //in diesem component werden einfach die daten von der ItemPage übergeben und die Reiseziele angezeigt
 const ReiseZiel = ({ item, children }) => (
   <div className="ReiseZiel">
+    <div className="top-part">
     <div className="ReiseZiel-left">
         <h5>{item.preis}€ pro Woche</h5>
         <div className="ReiseZiel-preis">{item.zielStadt}, {item.zielLand}</div>
@@ -16,8 +17,12 @@ const ReiseZiel = ({ item, children }) => (
       <div className="ReiseZiel-image" >
         <img src={item.bildUrl}className="ReiseZiel-logo" alt="logo" />
       </div>
-      {children}
+      </div>
+    
     </div>
+    <div className="bottom-part">
+      <a href={item.url}><button>Mehr erfahren</button></a>
+      </div>
   </div>
 )
 

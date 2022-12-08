@@ -1,6 +1,7 @@
 .ReiseZiel {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   background-color: #f3f4f6;
   border: none;
   border-radius: 15px;
@@ -10,6 +11,10 @@
 
 .ReiseZiel form {
   margin-top: 15px;
+}
+
+.top-part {
+  display: flex;
 }
 
 .ReiseZiel-image {

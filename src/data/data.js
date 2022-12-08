@@ -8,7 +8,8 @@ let artikel = [
     abreiseDatumZeit: '10.00 AM',
     rueckkehrDatumZeit: '12.00 PM',
     flightNumber: 'AI-202',
-    bildUrl: "https://media.cntraveler.com/photos/591f1c7d1f187a2af3dedef0/16:9/w_2580,c_limit/barcelona-park-guell-GettyImages-512152500.jpg"
+    bildUrl: "https://media.cntraveler.com/photos/591f1c7d1f187a2af3dedef0/16:9/w_2580,c_limit/barcelona-park-guell-GettyImages-512152500.jpg",
+    url: "https://www.tui.de"
   },
   {
     id: 1,
