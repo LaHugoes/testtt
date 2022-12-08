@@ -169,7 +169,7 @@ class App extends Component {
           <h2>Ihr Digitales Reisebüro</h2>
         </div>
         <div className="container">
-          <div className="one-third column">
+          <div className="one-third spalte">
             <Tabs onSelect={this.auswahlBearbeiten}>
               <TabList>
                 <Tab>Reise-Suche</Tab>
@@ -179,14 +179,14 @@ class App extends Component {
                 <div className="ReiseZiel">
                   <form onSubmit={this.formAbschicken}>
                     <input
-                      className="row"
+                      className="reihe"
                       type="text"
                       value={this.state.zielLand}
                       onChange={this.zielLandBearbeiter}
                       placeholder="Ziel-Land"
                     />
                     <input
-                      className="row"
+                      className="reihe"
                       type="text"
                       value={this.state.zielStadt}
                       onChange={this.zielStadtBearbeiter}
@@ -207,12 +207,12 @@ class App extends Component {
                       placeholderText="Abreise Datum"
                     />
                     <input
-                      className="row"
+                      className="reihe"
                       type="text"
                       value={this.state.passagierAnzahl}
                       onChange={this.passagierAnzahlBearbeiter}
                     />
-                    <input className="row" type="submit" value="Suchen" />
+                    <input className="reihe" type="submit" value="Suchen" />
                   </form>
                 </div>
               </TabPanel>
@@ -226,7 +226,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div className="two-thirds column">
+          <div className="two-thirds spalte">
             <div className="header">
               <div className="Item-left">{headerElement}</div>
               <div className="Item-right">{startDatum}</div>

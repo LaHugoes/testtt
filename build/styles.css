@@ -36,8 +36,8 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
-.column,
-.columns {
+.spalte,
+.spalten {
   width: 100%;
   float: left;
   box-sizing: border-box;
@@ -55,24 +55,24 @@
   .container {
     width: 80%;
   }
-  .column,
-  .columns {
+  .spalte,
+  .spalten {
     margin-left: 4%;
   }
-  .column:first-child,
-  .columns:first-child {
+  .spalte:first-child,
+  .spalten:first-child {
     margin-left: 0;
   }
 
-  .one-third.column {
+  .one-third.spalte {
     width: 30.6666666667%;
     margin-top: 5px;
   }
-  .two-thirds.column {
+  .two-thirds.spalte {
     width: 65.3333333333%;
     margin-top: 5px;
   }
-  .one-half.column {
+  .one-half.spalte {
     width: 48%;
   }
 }
@@ -352,7 +352,7 @@ form {
 
 /* Self Clearing Goodness */
 .container:after,
-.row:after,
+.reihe:after,
 .u-cf {
   content: "";
   display: table;

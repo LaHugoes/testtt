@@ -53,7 +53,7 @@
 }
 .ReiseZiel-right {
   display: flex;
-  flex-direction: column;
+  flex-direction: spalte;
   justify-content: space-between;
 }
 
