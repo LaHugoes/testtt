@@ -18,7 +18,7 @@ Logik für den Preis-grenzen Slider
 #ReiseZielSeite
 Hier werden die artikel also Reiseobjekte gemapt und angzeigt
 
-#Item
+#ReiseZiel
 Hier ist die Struktur der einzelnen Objekte in einem component
 
 #data
