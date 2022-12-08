@@ -72,3 +72,4 @@ CustSlider.propTypes = {
 };
 
 export default CustSlider;
+//Jil

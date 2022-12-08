@@ -32,3 +32,4 @@ ReiseZielSeite.propTypes = {
 };
 
 export default ReiseZielSeite;
+//Janine
